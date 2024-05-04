@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.chart.AreaChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="508.0" prefWidth="827.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="group.randomwalk.MA_Controller">
+   <children>
+      <MenuBar blendMode="DARKEN" layoutX="64.0" layoutY="20.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="lancer">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Application">
+                     <graphic>
+                        <MenuButton mnemonicParsing="false">
+                          <items>
+                            <MenuItem fx:id="AffichageModeTexte" mnemonicParsing="false" onAction="#onAffichageModeTexte" text="Affichage en mode texte" />
+                            <MenuItem fx:id="AffichageModeDessin" mnemonicParsing="false" onAction="#onAffichageGraphique" text="Affichage en mode dessin" />
+                              <MenuItem mnemonicParsing="false" text="Animation">
+                                 <graphic>
+                                    <MenuButton mnemonicParsing="false">
+                                      <items>
+                                        <MenuItem mnemonicParsing="false" onAction="#onDemarrerAnimation" text="Demarrer" />
+                                        <MenuItem mnemonicParsing="false" onAction="#onArreterAnimation" text="Arrêter" />
+                                      </items>
+                                    </MenuButton>
+                                 </graphic>
+                              </MenuItem>
+                              <MenuItem mnemonicParsing="false" text="AnimDessin">
+                                 <graphic>
+                                    <MenuButton mnemonicParsing="false">
+                                      <items>
+                                        <MenuItem mnemonicParsing="false" onAction="#onAnimDessin" text="Demarrer" />
+                                        <MenuItem mnemonicParsing="false" onAction="#onArreterDessin" text="Arreter" />
+                                      </items>
+                                    </MenuButton>
+                                 </graphic></MenuItem>
+                          </items>
+                        </MenuButton>
+                     </graphic>
+                  </MenuItem>
+                  <MenuItem mnemonicParsing="false" onAction="#onRemiseZero" text="Remise à zéro" />
+                  <MenuItem mnemonicParsing="false" onAction="#onQuitter" text="Quitter" />
+            </items>
+          </Menu>
+        </menus>
+         <effect>
+            <Blend />
+         </effect>
+      </MenuBar>
+      <Pane layoutY="26.0" prefHeight="376.0" prefWidth="600.0" AnchorPane.bottomAnchor="-2.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="26.0">
+         <children>
+            <GridPane fx:id="GridText" layoutX="16.0" layoutY="35.0" prefHeight="428.0" prefWidth="780.0" visible="false">
+              <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <TextArea fx:id="Text_00" prefHeight="200.0" prefWidth="200.0" />
+                  <TextArea fx:id="Text_10" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" />
+                  <TextArea fx:id="Text_20" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" />
+                  <TextArea fx:id="Text_30" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" />
+               </children>
+            </GridPane>
+            <AreaChart fx:id="AreaChart" horizontalGridLinesVisible="false" layoutX="28.0" layoutY="35.0" legendSide="RIGHT" prefHeight="415.0" prefWidth="771.0" title="MarcheAleatoire" verticalGridLinesVisible="false" visible="false">
+              <xAxis>
+                <CategoryAxis fx:id="X_axis" side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis fx:id="Y_axis" side="LEFT" />
+              </yAxis>
+            </AreaChart>
+            <Canvas fx:id="canvas" disable="true" height="456.0" layoutX="18.0" layoutY="14.0" opacity="0.31" visible="false" width="790.0" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
