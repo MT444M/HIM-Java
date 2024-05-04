@@ -1,5 +1,6 @@
 # Marche Aléatoire
 
+https://github.com/MT444M/HIM-java/assets/107960014/105b1d84-ce1b-41ed-85be-885facfea66c
 
 
 Ce projet Java a pour but de construire plusieurs réalisations d'une marche aléatoire de dimension N, avec N pouvant être égal à 1 (marche aléatoire 1D) ou 2 (marche aléatoire 2D). Pour cela, deux tableaux bi-dimensionnels de type entier, `MarcheX` et `MarcheY`, sont utilisés pour stocker les coordonnées x et y des échantillons de la marche aléatoire construite.
