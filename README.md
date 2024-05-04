@@ -1,5 +1,11 @@
 # Marche Aléatoire
 
+<video width="320" height="240" controls>
+  <source src="HIM_java" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+
 Ce projet Java a pour but de construire plusieurs réalisations d'une marche aléatoire de dimension N, avec N pouvant être égal à 1 (marche aléatoire 1D) ou 2 (marche aléatoire 2D). Pour cela, deux tableaux bi-dimensionnels de type entier, `MarcheX` et `MarcheY`, sont utilisés pour stocker les coordonnées x et y des échantillons de la marche aléatoire construite.
 
 ## Initialisation
